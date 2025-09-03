@@ -11,7 +11,7 @@ function ExpenseContainer(){
 
     async function addExpense(title, amount) {
         try {
-            const newExpense =await fetch("http://localhost:3333/post", {
+            const newExpense =await fetch("https://back-1-2gtw.onrender.com/post", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({ title, amount })
@@ -27,7 +27,7 @@ function ExpenseContainer(){
 }
 
 async function getExpenses(){
-    const response = await fetch("http://localhost:3333/expenses");
+    const response = await fetch("hhttps://back-1-2gtw.onrender.com/expenses");
     const data = await response.json();
     setExpense(data.expenses);
 }
@@ -37,7 +37,7 @@ useEffect(() => {
   }, [])
 
     async function deleteExpense(id){
-        await fetch(`http://localhost:3333/delete/${id}`,{
+        await fetch(`https://back-1-2gtw.onrender.com/delete/${id}`,{
             method:"DELETE"
         });
         getExpenses();
