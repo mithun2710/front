@@ -27,7 +27,7 @@ function ExpenseContainer(){
 }
 
 async function getExpenses(){
-    const response = await fetch("hhttps://back-1-2gtw.onrender.com/expenses");
+    const response = await fetch("https://back-1-2gtw.onrender.com/expenses");
     const data = await response.json();
     setExpense(data.expenses);
 }
