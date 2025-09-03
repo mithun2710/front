@@ -27,7 +27,7 @@ function ExpenseContainer(){
 }
 
 async function getExpenses(){
-    const response = await fetch("http://localhost:3333/post");
+    const response = await fetch("http://localhost:3333/expenses");
     const data = await response.json();
     setExpense(data.expenses);
 }
