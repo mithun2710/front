@@ -3,23 +3,19 @@
   line-height: 1.5;
   font-weight: 400;
 }
-
 body {
   background-color: #f3fcff;
-  margin: 0;
-  padding: 0;
 }
-
 .expense-container {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   max-width: 600px;
-  margin: 50px auto;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
-/* Expense Item */
 .expense-item {
   display: flex;
   justify-content: space-between;
@@ -28,7 +24,6 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 10px;
-  position: relative;
 }
 
 .expense-item.income {
@@ -47,29 +42,26 @@ body {
   color: #dc0202;
 }
 
-/* Expense Form */
 .expense-form {
   padding: 10px;
   padding-top: 0;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 20px;
-  box-shadow: 3px 3px 5px 1px rgba(0,0,0,0.1);
+  
+  box-shadow: 3px 3px 5px 1px;
 }
-
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-bottom: 10px;
 }
-
 input {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
-
 button {
   padding: 10px;
   border-radius: 5px;
@@ -80,16 +72,13 @@ button {
   width: 100%;
 }
 
-/* Balance Container */
 .balance-container {
   background-color: #8385f4;
   border-radius: 10px;
   padding: 20px;
   display: flex;
   justify-content: space-around;
-  gap: 20px;
-  box-shadow: 3px 3px 5px 1px rgba(0,0,0,0.1);
-  flex-wrap: wrap; /* helps on smaller screens */
+  box-shadow: 3px 3px 5px 1px;
 }
 
 .currency-item {
@@ -101,8 +90,6 @@ button {
   color: #fff;
   border-radius: 10px;
   padding: 20px 30px;
-  flex: 1 1 120px;
-  text-align: center;
 }
 
 .currency-item .title {
@@ -123,14 +110,12 @@ button {
   color: #ff9494;
 }
 
-/* Error */
 .error {
   color: #dc0202;
   font-size: 12px;
   margin-bottom: 10px;
 }
 
-/* Delete Button Overlay */
 .delete-button-overlay {
   position: absolute;
   top: 0;
@@ -145,7 +130,6 @@ button {
   transition: all 0.3s ease-in-out;
   transform: translateX(10%);
 }
-
 .delete-button-overlay button {
   border: none;
   border-radius: 5px;
@@ -154,14 +138,14 @@ button {
   background-color: #f14848;
   color: #fff;
 }
-
+.expense-item {
+  position: relative;
+}
 .expense-item:hover .delete-button-overlay {
   opacity: 1;
   transform: translateX(0);
 }
-
-/* Topic */
-.topic {
+.topic{
   margin: auto;
   background-color: #8385f4;
   height: 50px;
@@ -169,63 +153,5 @@ button {
   border-radius: 10px;
   margin-bottom: 10px;
   padding-left: 8px;
-  display: flex;
-  align-items: center;
-  color: white;
-  text-align: center;
-}
-
-/* ---------------- RESPONSIVE STYLES ---------------- */
-
-/* Tablets & smaller */
-@media (max-width: 768px) {
-  .expense-container {
-    padding: 15px;
-    margin: 20px auto;
-    width: 90%;
-  }
-
-  .balance-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .currency-item {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .topic {
-    width: 90%;
-    font-size: 16px;
-    height: auto;
-    padding: 10px;
-  }
-}
-
-/* Phones */
-@media (max-width: 480px) {
-  .expense-container {
-    padding: 10px;
-    margin: 10px auto;
-  }
-
-  input, button {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  .currency-item .amount {
-    font-size: 20px;
-  }
-
-  .currency-item {
-    padding: 15px 20px;
-  }
-
-  .topic {
-    font-size: 14px;
-    padding: 8px;
-  }
+  color: white ;
 }
